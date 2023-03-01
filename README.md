@@ -300,7 +300,7 @@
 - [Gershman & Daw, 2016](https://doi.org/10.1146/annurev-psych-122414-033625)
 - [Graves et al., 2016](https://doi.org/10.1038/nature20101)
 - [Li et al., 2018](https://doi.org/10.48550/arXiv.1808.03747)
-- [Ganguli1 & Sompolinsky, 2012](https://doi.org/10.1146/annurev-neuro-062111-150410)
+- [Ganguli & Sompolinsky, 2012](https://doi.org/10.1146/annurev-neuro-062111-150410)
 - [Zador et al., 2022](https://doi.org/10.48550/arXiv.2210.08340)
 
 ## Acknowledgments
