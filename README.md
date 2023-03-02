@@ -4,6 +4,8 @@
 
 ![Alt Text](./brain.gif)
 
+## A. [From Neuro-AI course](#acknowledgments):
+
 ## 1. ANNs and the Brain
 ### 1.1. The Zoo of Networks
 
@@ -260,21 +262,21 @@
 - [Kosoy et al., 2020](https://doi.org/10.48550/arXiv.2005.02880)
 - [Goddu & Gopnik, 2021](https://doi.org/10.1037/dev0000872)
 
-### Extra (from Q&As)
+## Extra (from Q&As)
 
-#### STDP
+### STDP
 
 - [Shouval et al., 2010](https://doi.org/10.3389/fncom.2010.00019)
 - [Inglebert & Debanne, 2021](https://doi.org/10.3389/fncel.2021.727336)
 
-#### Neuronal subtypes
+### Neuronal subtypes
 
 - [Masland, 2004](https://doi.org/10.1016/j.cub.2004.06.035)
 - [Gabitto et al., 2016](https://doi.org/10.1016/j.cell.2016.01.026)
 - [Bikoff et al., 2016](https://doi.org/10.1016/j.cell.2016.01.027)
 - [Zeng & Sanes, 2017](https://doi.org/10.1038/nrn.2017.85)
 
-#### Dendrites
+### Dendrites
 
 - [Poirazi et al., 2003](https://doi.org/10.1016/S0896-6273(03)00149-1)
 - [Cazé et al., 2013](https://doi.org/10.1371/journal.pcbi.1002867)
@@ -282,20 +284,20 @@
 - [Lanoue & Cooper, 2018](https://doi.org/10.1016/j.ydbio.2018.12.005)
 - [Beniaguev et al., 2021](https://doi.org/10.1016/j.neuron.2021.07.002)
 
-#### Glia, computation, cognition
+### Glia, computation, cognition
 
 - [Porto-Pazos et al., 2011](https://doi.org/10.1371/journal.pone.0019109)
 - [Sajedinia & Hélie, 2018](https://doi.org/10.1155/2018/3689487)
 - [Kastanenka et al., 2019](https://doi.org/10.1002/glia.23632)
 
-#### Sleep
+### Sleep
 
 - [Hinton et al., 1995](https://doi.org/10.1126/science.7761831)
 - [Walker, 2018](https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316)
 - [Watkins et al., 2020](https://doi.org/10.1109/CVPRW50498.2020.00188)
 - [Golden et al., 2022](https://doi.org/10.1371/journal.pcbi.1010628)
 
-#### Misc.
+### Misc.
 
 - [Gershman & Daw, 2016](https://doi.org/10.1146/annurev-psych-122414-033625)
 - [Graves et al., 2016](https://doi.org/10.1038/nature20101)
