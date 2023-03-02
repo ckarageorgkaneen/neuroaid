@@ -4,7 +4,7 @@
 
 ![Alt Text](./brain.gif)
 
-## A. [From Neuro-AI course](#acknowledgments):
+## A. [FROM NEURO-AI COURSE](#acknowledgments):
 
 ## 1. ANNs and the Brain
 ### 1.1. The Zoo of Networks
