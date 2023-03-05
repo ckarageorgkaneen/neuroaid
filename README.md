@@ -492,8 +492,231 @@ Mineault, Patrick [**Unsupervised models of the brain**](https://xcorr.net/2021/
 
 Dettmers, Tim [**The Brain vs Deep Learning Part I: Computational Complexity — Or Why the Singularity Is Nowhere Near**](https://timdettmers.com/2015/07/27/brain-vs-deep-learning-singularity) (2015)
 
-## Acknowledgments
+## C. [FROM INNOCENTI'S NEURO-AI PAPERS](#acknowledgments)
+
+- [Outline](#Outline)
+- [Surveys](#Surveys)
+- [Deep learning](#Deep-learning)
+  - [Reviews & perspectives](#Reviews-&-perspectives)
+  - [Philosophical takes](#Philosophical-takes)
+  - [Vision](#Vision)
+  - [Audition](#Audition)
+  - [Somatosensation](#Somatosensation)
+  - [Motor control](#Motor-control)
+  - [Validation methods](#Validation-methods)
+  - [Model benchmarks](#Model-benchmarks)
+  - [Backprop in the brain?](#Backprop-in-the-brain?)
+  - [Artificial & biological neurons](#Artificial-&-biological-neurons)
+  - [Spiking neural networks](#Spiking-neural-networks)
+  - [Nature & nurture](#Nature-&-nurture)
+- [Reinforcement learning](#Reinforcement-learning)
+  - [Reviews & perspectives](#Reviews-&-perspectives)
+  - [Experiments](#Experiments)
+- [The Thousand Brains Theory](#The-Thousand-Brains-Theory)
+
+## Outline
+
+- [Is the brain a good model for machine intelligence?](https://www.nature.com/articles/482462a) (2012)
+- [What Intelligent Machines Need to Learn From the Neocortex](https://ieeexplore.ieee.org/abstract/document/7934229) by Hawkins (2017)
+- [To Advance Artificial Intelligence, Reverse-Engineer the Brain](https://www.wired.com/story/to-advance-artificial-intelligence-reverse-engineer-the-brain/) by DiCarlo (2018);
+- [The intertwined quest for understanding biological intelligence and creating artificial intelligence](https://neuroscience.stanford.edu/news/intertwined-quest-understanding-biological-intelligence-and-creating-artificial-intelligence) by Ganguli (2018)
+- [How AI and neuroscience drive each other forwards](https://www.nature.com/articles/d41586-019-02212-4) by Savage (2019)
+- [Using neuroscience to develop artificial intelligence](https://science.sciencemag.org/content/363/6428/692 by Ullman (2019)
+
+## Surveys
+
+- [Neuroscience-Inspired Artificial Intelligence](http://www.sciencedirect.com/science/article/pii/S0896627317305093) by Hassabis et al. (2017)
+- [Building machines that learn and think like people](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/building-machines-that-learn-and-think-like-people/A9535B1D745A0377E16C590E14B94993) by Lake et al. (2017)
+- [Cognitive computational neuroscience](https://www.nature.com/articles/s41593-018-0210-5) by Kriegeskorte & Douglas (2018)
+- [Natural and Artificial Intelligence: A brief introduction to the interplay between AI and neuroscience research](https://www.sciencedirect.com/science/article/pii/S0893608021003683) by Macpherson et al. (2021)
+- [The roles of supervised machine learning in systems neuroscience](https://www.sciencedirect.com/science/article/pii/S0301008218300856) by Glaser et al. (2019)
+- [What Learning Systems do Intelligent Agents Need? Complementary Learning Systems Theory Updated](https://www.sciencedirect.com/science/article/pii/S1364661316300432) by Kumaran, Hassabis & McClelland (2016)
+- [Computational Foundations of Natural Intelligence](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5770642/) by van Gerven (2017)
+- [Insights from the brain: The road towards Machine Intelligence](https://www.insightsfromthebrain.com) by Thiboust (2020)
+- [The Mutual Inspirations of Machine Learning and Neuroscience](https://www.sciencedirect.com/science/article/pii/S089662731500255X) by Helmstaedter (2015)
+
+## Deep learning
+
+### Reviews & perspectives
+
+- [A deep learning framework for neuroscience](https://www.nature.com/articles/s41593-019-0520-2) by Richards et al. (201
+- [How learning unfolds in the brain: toward an optimization view](https://www.sciencedirect.com/science/article/abs/pii/S0896627321006772) by Hennig et al. (2021)
+- [If deep learning is the answer, what is the question?](https://www.nature.com/articles/s41583-020-00395-8)
+by Saxe, Nelli & Summerfield (2021)
+- [Biological constraints on neural network models of cognitive function](https://www.nature.com/articles/s41583-021-00473-5) by Pulvermüller et al. (2021)
+- [Direct Fit to Nature: An Evolutionary Perspective on Biological and Artificial Neural Networks](http://www.sciencedirect.com/science/article/pii/S089662731931044X) by Hasson, Nastase & Goldstein (2020)
+- [Engineering a Less Artificial Intelligence](http://www.sciencedirect.com/science/article/pii/S0896627319307408) by Sinz et al. (2019)
+- [Deep Neural Networks Help to Explain Living Brains](https://www.quantamagazine.org/deep-neural-networks-help-to-explain-living-brains-20201028/) by Ananthaswamy (2020)
+- [Artificial Neural Networks for Neuroscientists: A Primer](https://www.sciencedirect.com/science/article/pii/S0896627320307054) by Yang & Wang (2020)
+- [Lessons From Deep Neural Networks for Studying the Coding Principles of Biological Neural Networks](https://www.frontiersin.org/articles/10.3389/fnsys.2020.615129/full)
+- [A neural network walks into a lab: towards using deep nets as models for human behavior](http://arxiv.org/abs/2005.02181) by Ma & Peters (2005)
+- [Deep Learning for Cognitive Neuroscience](http://arxiv.org/abs/1903.01458) by Storrs & Kriegeskorte (2019)
+- [Deep neural network models of sensory systems: windows onto the role of task constraints](https://www.sciencedirect.com/science/article/pii/S0959438818302034) by Kell & McDermott (2019)
+- [What does it mean to understand a neural network?](http://arxiv.org/abs/1907.06374) by Lillicrap & Kording (2019)
+- [Deep Neural Networks in Computational Neuroscience](https://www.biorxiv.org/content/10.1101/133504v2)
+by Kietzmann, McClure & Kriegeskorte (2018)
+- [Principles for models of neural information processing](https://www.sciencedirect.com/science/article/pii/S1053811917306638) by Kay (2018)
+- [Toward an Integration of Deep Learning and Neuroscience](https://www.frontiersin.org/articles/10.3389/fncom.2016.00094/full) by Marblestone, Wayne & Kording (2016)
+- [Using goal-driven deep learning models to understand sensory cortex](https://www.nature.com/articles/nn.4244) by Yamins & DiCarlo (2016)
+- [Deep Neural Networks: A New Framework for Modeling Biological Vision and Brain Information Processing](https://www.annualreviews.org/doi/10.1146/annurev-vision-082114-035447) by Kriegeskorte (2015)
+- [From the neuron doctrine to neural networks](https://www.nature.com/articles/nrn3962) by Yuste (2015)
+- [The recent excitement about neural networks](https://europepmc.org/article/med/2911347) by Crick (1989)
+- [Implications of neural networks for how we think about brain function](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/implications-of-neural-networks-for-how-we-think-about-brain-function/BF0C676BD8290F6F02235C82865A0623)
+
+### Philosophical takes
+
+- [On logical inference over brains, behaviour, and artificial neural networks](https://psyarxiv.com/tbmcg/)
+by Guest & Martin (2021)
+- [Kay (2018)](https://www.sciencedirect.com/science/article/pii/S1053811917306638).
+- [Deep Neural Networks as Scientific Models](http://www.sciencedirect.com/science/article/pii/S1364661319300348) by Cichy & Kaiser (2019)
+- [Explanatory models in neuroscience: Part 2 -- constraint-based intelligibility](http://arxiv.org/abs/2104.01489)
+- [Explanatory models in neuroscience: Part 1 -- taking mechanistic abstraction seriously](http://arxiv.org/abs/2104.01490)
+
+### Vision
+
+- [Convolutional Neural Networks as a Model of the Visual System: Past, Present, and Future](https://direct.mit.edu/jocn/article/doi/10.1162/jocn_a_01544/97402/Convolutional-Neural-Networks-as-a-Model-of-the)
+by - Lindsay (2020)
+- [Going in circles is the way forward: the role of recurrence in visual inference](https://www.sciencedirect.com/science/article/pii/S0959438820301768) by van Bergen & Kriegeskorte (2020)
+- [Capturing the objects of vision with neural networks](https://www.nature.com/articles/s41562-021-01194-6)by Peters & Kriegeskorte (2021)
+- [Deep Learning: The Good, the Bad, and the Ugly](https://www.annualreviews.org/doi/10.1146/annurev-vision-091718-014951) by Serre (2019)
+- [Unsupervised neural network models of the ventral visual stream](https://www.pnas.org/content/118/3/e2014196118) by Zhuang et al. (2021)
+- [Bridging the Gaps Between Residual Learning, Recurrent Neural Networks and Visual Cortex](https://arxiv.org/abs/1604.03640) by Liao & Poggio (2020)
+- [Learning to see stuff](https://www.sciencedirect.com/science/article/pii/S2352154619300397) by Fleming & Storrs (2019)
+- [Storrs & Fleming](https://journals.sagepub.com/doi/10.1177/0963721421990334).
+- [A Unified Theory of Early Visual Representations from Retina to Cortex through Anatomically Constrained Deep CNNs](http://arxiv.org/abs/1901.00945) by Lindsey et al. (2019)
+- [Visual Cortex and Deep Networks: Learning Invariant Representations](https://mitpress.mit.edu/books/visual-cortex-and-deep-networks)
+- [Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003963)
+- [Deep Neural Networks Reveal a Gradient in the Complexity of Neural Representations across the Ventral Stream](https://www.jneurosci.org/content/35/27/10005.short)
+- [Deep Supervised, but Not Unsupervised, Models May Explain IT Cortical Representation](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003915)
+by Khaligh-Razavi & Kriegeskorte (2014)
+[Performance-optimized hierarchical models predict neural responses in higher visual cortex](https://www.pnas.org/content/111/23/8619) by Yamins et al. (2014)
+
+### Audition
+
+[A Task-Optimized Neural Network Replicates Human Auditory Behavior, Predicts Brain Responses, and Reveals a Cortical Processing Hierarchy](https://www.sciencedirect.com/science/article/pii/S0896627318302502)
+by Kell et al. (2018)
+
+### Somatosensation
+
+[Toward goal-driven neural network models for the rodent whisker-trigeminal system](https://arxiv.org/abs/1706.07555) by Zhuang et al. (2017)
+
+### Motor control
+
+[A neural network that finds a naturalistic solution for the production of muscle activity](https://www.nature.com/articles/nn.4042) by Sussillo et al. (2015)
+
+### Validation methods
+
+- [Analyzing biological and artificial neural networks: challenges with opportunities for synergy?](https://www.sciencedirect.com/science/article/pii/S0959438818301569) by Barrett, Morcos & Macke (2019)
+- [How can deep learning advance computational modeling of sensory information processing?](http://arxiv.org/abs/1810.08651) by Thompson et al. (2018)
+
+### Closed-loop experiments
+
+- [Neural population control via deep image synthesis](https://science.sciencemag.org/content/364/6439/eaav9436) by Bashivan, Kar & DiCarlo (2019)
+- [Evolving Images for Visual Neurons Using a Deep Generative Network Reveals Coding Principles and Neuronal Preferences](https://www.sciencedirect.com/science/article/pii/S0092867419303915) by Ponce et al. (2019)
+- [Inception loops discover what excites neurons most using deep predictive models](https://www.nature.com/articles/s41593-019-0517-x) by Walker et al. (2019)
+
+### Model benchmarks
+
+- [Brain-Score: Which Artificial Neural Network for Object Recognition is most Brain-Like?](https://www.biorxiv.org/content/10.1101/407007v2) by Schrimpf et al. (2018)
+- [Integrative Benchmarking to Advance Neurally Mechanistic Models of Human Intelligence](https://www.sciencedirect.com/science/article/pii/S089662732030605X) by Schrimpf et al. (2020)
+- [The Algonauts Project 2021 Challenge: How the Human Brain Makes Sense of a World in Motion](http://arxiv.org/abs/2104.13714) by Cichy et al. (2021)
+- [The Algonauts Project](https://www.nature.com/articles/s42256-019-0127-z) by Cichy, Roig & Oliva (2019)
+- [Brain hierarchy score: Which deep neural networks are hierarchically brain-like?](https://www.sciencedirect.com/science/article/pii/S2589004221009810) by Nonaka et al. (2021)
+
+### Backprop in the brain?
+
+- [Burst-dependent synaptic plasticity can coordinate learning in hierarchical circuits](https://www.nature.com/articles/s41593-021-00857-x) by Payeur et al. (2021)
+- [Backpropagation and the brain](https://www.nature.com/articles/s41583-020-0277-3) by Lillicrap et al. (2020)
+- [Artificial Neural Nets Finally Yield Clues to How Brains Learn](https://www.quantamagazine.org/artificial-neural-nets-finally-yield-clues-to-how-brains-learn-20210218/)
+- [Dendritic solutions to the credit assignment problem](https://www.sciencedirect.com/science/article/pii/S0959438818300485)
+by Richards & Lillicrap (2019)
+- [Control of synaptic plasticity in deep cortical networks](https://www.nature.com/articles/nrn.2018.6)
+by Roelfsema & Holtmaat (2018)
+- [Reply to ‘Can neocortical feedback alter the sign of plasticity?’](https://www.nature.com/articles/s41583-018-0048-6)
+- [Can the Brain Do Backpropagation? —Exact Implementation of Backpropagation in Predictive Coding Networks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7610561/)
+by Song et al. (2020)
+
+### Artificial & biological neurons
+
+- [Dendritic Computing: Branching Deeper into Machine Learning](https://www.sciencedirect.com/science/article/pii/S0306452221005017) by Acharya et al. (2021)
+- [Single cortical neurons as deep artificial neural networks](https://www.sciencedirect.com/science/article/pii/S0896627321005018) by Beniaguev, Segev & London (2021)
+- [How Computationally Complex Is a Single Neuron?](https://www.quantamagazine.org/how-computationally-complex-is-a-single-neuron-20210902/) by Whitten (2021)
+- [Drawing inspiration from biological dendrites to empower artificial neural networks](https://www.sciencedirect.com/science/article/pii/S0959438821000544) by Chavlis & Poirazi (2021)
+- [Dendritic action potentials and computation in human layer 2/3 cortical neurons](https://science.sciencemag.org/content/367/6473/83) by Gidon et al. (2020)
+- [Hidden Computational Power Found in the Arms of Neurons](https://www.quantamagazine.org/neural-dendrites-reveal-their-computational-power-20200114/) (Cepelewicz, 2020)
+- [Pyramidal Neuron as Two-Layer Neural Network](https://www.sciencedirect.com/science/article/pii/S0896627303001491) by Poirazi, Brannon & Mel (2003)
+
+### Spiking neural networks
+
+[Deep learning in spiking neural networks](https://www.sciencedirect.com/science/article/pii/S0893608018303332) by Ghodrati et al. (2019)
+
+### Nature & nurture
+
+- [A critique of pure learning and what artificial neural networks can learn from animal brains](https://www.nature.com/articles/s41467-019-11786-6) by Zador (2019)
+- [The Self-Assembling Brain: How Neural Networks Grow Smarter](https://press.princeton.edu/books/hardcover/9780691181226/the-self-assembling-brain) by Hiesinger (2021)
+- [Innateness, AlphaZero, and Artificial Intelligence](http://arxiv.org/abs/1801.05667) by Marcus (2018)
+
+## Reinforcement learning
+
+### Reviews & perspectives
+
+- [Deep Reinforcement Learning and Its Neuroscientific Implications](http://www.sciencedirect.com/science/article/pii/S0896627320304682) by Botvinick et al. (2020)
+- [A distributional code for value in dopamine-based reinforcement learning](https://www.nature.com/articles/s41586-019-1924-6)
+- [Reinforcement Learning, Fast and Slow](https://www.sciencedirect.com/science/article/pii/S1364661319300610)
+by Botvinick et al. (2019)
+- [Reinforcement learning in artificial and biological systems](https://www.nature.com/articles/s42256-019-0025-4)
+by Neftci & Averbeck (2019)
+- [The successor representation in human reinforcement learning](https://www.nature.com/articles/s41562-017-0180-8)
+
+### Experiments
+
+- [Using deep reinforcement learning to reveal how the brain encodes abstract state-space representations in high-dimensional environments](https://www.sciencedirect.com/science/article/pii/S0896627320308990)
+by Cross et al. (2021)
+- [Validating the Representational Space of Deep Reinforcement Learning Models of Behavior with Neural Data](https://www.biorxiv.org/content/10.1101/2021.06.15.448556v1.abstract) by Bruch et al. (2021)
+
+
+## The Thousand Brains Theory
+
+- [On Intelligence](https://numenta.com/resources/on-intelligence/) (2004)
+- [A Thousand Brains: A New Theory of Intelligence](https://numenta.com/a-thousand-brains-by-jeff-hawkins)
+by Hawkins (2021)
+- [A thousand brains: toward biologically constrained AI](https://doi.org/10.1007/s42452-021-04715-0)
+by Hole & Ahmad (2021)
+- [Grid Cell Path Integration For Movement-Based Visual Object Recognition](http://arxiv.org/abs/2102.09076)
+by Leadholm, Lewis & Ahmad (2021)
+- [A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex](https://www.frontiersin.org/articles/10.3389/fncir.2018.00121/full) by Hawkins et al. (2019)
+- [Locations in the Neocortex: A Theory of Sensorimotor Object Recognition Using Cortical Grid Cells](https://www.frontiersin.org/articles/10.3389/fncir.2019.00022/full) by Lewis et al. (2019)
+- [A Theory of How Columns in the Neocortex Enable Learning the Structure of the World](https://www.frontiersin.org/articles/10.3389/fncir.2017.00081/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Neural_Circuits&id=295079) by Hawkins, Ahmad & Cui (2017)
+- [Why Neurons Have Thousands of Synapses, a Theory of Sequence Memory in Neocortex](https://www.frontiersin.org/articles/10.3389/fncir.2016.00023/full) by Hawkins & Ahmad (2016)
+
+## Background sources
+
+### Neuroscience
+
+- [Principles of Neural Science](https://www.mhprofessional.com/9781259642234-usa-principles-of-neural-science-sixth-edition-group) by Kandel et al. (2021)
+- [Neuroscience](https://global.oup.com/ushe/product/neuroscience-9781605353807%3Fq%3Dneuroscience%26lang%3Den%26cc%3Dus) by Purves et al. (2018)
+- [Principles of Neural Design](https://mitpress.mit.edu/books/principles-neural-design) by Sterling & Laughlin (2017)
+- [Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems](https://mitpress.mit.edu/books/theoretical-neuroscience) by Abbott & Dayan (2005)
+- [The Computational Brain](https://mitpress.mit.edu/books/computational-brain) by Churchland & Sejnowski (1992)
+- [Models of the Mind: How Physics, Engineering and Mathematics Have Shaped Our Understanding of the Brain](https://gracewlindsay.com/2021/02/10/models-of-the-mind-how-physics-engineering-and-mathematics-have-shaped-our-understanding-of-the-brain/) by Lindsay (2021)
+- [The Idea of the Brain: A History](https://www.waterstones.com/book/the-idea-of-the-brain/professor-matthew-cobb/9781781255902) by Cobb (2020)
+- [Brain Computation as Hierarchical Abstraction](https://mitpress.mit.edu/books/brain-computation-hierarchical-abstraction) by Ballard (2015)
+  
+### AI
+
+- [Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu) by Russell & Norvig (2020) - the equivalent bible of AI
+- [Deep Learning for AI](https://dl.acm.org/doi/10.1145/3448250) by Hinton, Bengio & LeCun (2021) - the most recent survey of deep learning
+- [Deep Learning](https://www.deeplearningbook.org/) by Goodfellow et al. (2016)
+- [The Deep Learning Revolution](https://mitpress.mit.edu/books/deep-learning-revolution) by Sejnowski (2018)
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) by Nielsen (2015)
+- [Dive Into Deep Learning: Tools for Engagement](https://d2l.ai/) by Quinn et al. (2019)
+- [Neural network models and deep learning](https://www.sciencedirect.com/science/article/pii/S0960982219302040) by Kriegeskorte & Golan (2019) - a good primer on deep neural networks for biologists
+- [Reinforcement Learning: An Introduction](https://mitpress.mit.edu/books/reinforcement-learning-second-edition) by Sutton & Barto (2018)
+
+
+# Acknowledgments
 
 This list was based on:
 - [Paul Middlebrooks](https://twitter.com/pgmid)' [Brain Inspired Neuro-AI course](https://braininspired.co/neuro-ai/)
 - [Markus Frey](https://twitter.com/CYHSM)'s [Awesome Neuro-AI Papers](https://github.com/CYHSM/awesome-neuro-ai-papers)
+- [Francesco Innocenti](https://twitter.com/InnocFrancesco)'s [Neuro-AI papers](https://github.com/FrancescoInnocenti/Neuro_AI_Papers)
